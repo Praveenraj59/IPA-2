@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    {% if ticker %}
+        <h2>Stock: {{ ticker }}</h2>
+        <p>Predicted Price: {{ predicted_price }}</p>
+        <p>Sentiment: {{ sentiment }} (Score: {{ score }})</p>
+        <p>Portfolio Weights: {{ weights }}</p>
+        <p>Investment Amounts: {{ investment_amounts }}</p>
+        <p>Insights: {{ insights }}</p>
+    {% else %}
+        <h2>Stocks: {{ tickers }}</h2>
+        <p>Predicted Prices: {{ predicted_prices }}</p>
+        <p>Sentiments: {{ sentiments }}</p>
+        <p>Portfolio Weights: {{ weights }}</p>
+        <p>Value at Risk (VaR): {{ var }}%</p>
+        <p>Conditional Value at Risk (CVaR): {{ cvar }}%</p>
+        <p>Rebalancing Recommendations: {{ rebalancing_recommendations }}</p>
+        <p>Risk Management: {{ risk_management }}</p>
+    {% endif %}
+    <a href="/">Back</a>
+</body>
+</html>

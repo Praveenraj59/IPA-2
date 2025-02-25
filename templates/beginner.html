@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beginner Investor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Beginner Investor</h1>
+    <form action="/beginner" method="POST">
+        <label for="ticker">Stock Ticker:</label>
+        <input type="text" id="ticker" name="ticker" required>
+        <br>
+        <label for="risk_tolerance">Risk Tolerance:</label>
+        <select id="risk_tolerance" name="risk_tolerance" required>
+            <option value="Conservative">Conservative</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Aggressive">Aggressive</option>
+        </select>
+        <br>
+        <label for="investment_amount">Investment Amount (INR):</label>
+        <input type="number" id="investment_amount" name="investment_amount" required>
+        <br>
+        <label for="review_frequency">Review Frequency:</label>
+        <select id="review_frequency" name="review_frequency" required>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="annually">Annually</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

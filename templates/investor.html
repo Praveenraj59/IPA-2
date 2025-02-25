@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experienced Investor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Experienced Investor</h1>
+    <form action="/investor" method="POST">
+        <label for="tickers">Select Stocks:</label><br>
+        <input type="checkbox" id="ticker1" name="tickers" value="TSLA">
+        <label for="ticker1">Tesla (TSLA)</label><br>
+        <input type="checkbox" id="ticker2" name="tickers" value="AAPL">
+        <label for="ticker2">Apple (AAPL)</label><br>
+        <input type="checkbox" id="ticker3" name="tickers" value="MSFT">
+        <label for="ticker3">Microsoft (MSFT)</label><br>
+        <br>
+        <label for="risk_tolerance">Risk Tolerance:</label>
+        <select id="risk_tolerance" name="risk_tolerance" required>
+            <option value="conservative">Conservative</option>
+            <option value="moderate">Moderate</option>
+            <option value="aggressive">Aggressive</option>
+        </select>
+        <br>
+        <label for="current_allocation">Current Portfolio Allocation:</label>
+        <input type="text" id="current_allocation" name="current_allocation" required>
+        <br>
+        <label for="investment_horizon">Investment Horizon:</label>
+        <select id="investment_horizon" name="investment_horizon" required>
+            <option value="short_term">Less than 1 year</option>
+            <option value="medium_term">1-5 years</option>
+            <option value="long_term">More than 5 years</option>
+        </select>
+        <br>
+        <label for="rebalance_frequency">Rebalance Frequency:</label>
+        <select id="rebalance_frequency" name="rebalance_frequency" required>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="annually">Annually</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

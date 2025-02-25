@@ -1,3 +1,4 @@
+
 flask
 numpy
 pandas
@@ -7,4 +8,6 @@ yfinance
 nltk
 transformers
 dwave-ocean-sdk
-plotly  
+plotly
+newsapi-python
+tweepy
